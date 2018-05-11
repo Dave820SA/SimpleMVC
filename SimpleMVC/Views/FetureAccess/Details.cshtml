@@ -1,0 +1,71 @@
+﻿@model UserBusinessLayer.FeatureAccess
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>FeatureAccess</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.User.PIN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User.PIN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WebLinkID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WebLinkID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SIA_AppFeature.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SIA_AppFeature.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AllowFeatureFlag)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AllowFeatureFlag)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UnlockQ)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UnlockQ)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UnlockAttempt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UnlockAttempt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UnlockedBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UnlockedBy)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UnlockedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UnlockedDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AppFeatureAccessID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

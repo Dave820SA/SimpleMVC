@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AwardActivityModelStoreContainer" CdmEntityContainer="AwardActivityContext">
+    <EntitySetMapping Name="tblHelpTexts">
+      <EntityTypeMapping TypeName="AwardActivityModel.tblHelpText">
+        <MappingFragment StoreEntitySet="tblHelpText">
+          <ScalarProperty Name="HelpTextKey" ColumnName="HelpTextKey" />
+          <ScalarProperty Name="HelpText" ColumnName="HelpText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SAPDACTIVITYModelStoreContainer" CdmEntityContainer="ActivityContext">
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="SAPDACTIVITYModel.Person">
+        <MappingFragment StoreEntitySet="Person_Person">
+          <ScalarProperty Name="AppEntityID" ColumnName="AppEntityID" />
+          <ScalarProperty Name="PersonTypeID" ColumnName="PersonTypeID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Features">
+      <EntityTypeMapping TypeName="SAPDACTIVITYModel.Feature">
+        <MappingFragment StoreEntitySet="SIA_AppFeature">
+          <ScalarProperty Name="AppFeatureID" ColumnName="AppFeatureID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FeatureVisibleFlag" ColumnName="FeatureVisibleFlag" />
+          <ScalarProperty Name="FeatureCategoryID" ColumnName="FeatureCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeatureAccesses">
+      <EntityTypeMapping TypeName="SAPDACTIVITYModel.FeatureAccess">
+        <MappingFragment StoreEntitySet="SIA_AppFeatureAccess">
+          <ScalarProperty Name="AppFeatureAccessID" ColumnName="AppFeatureAccessID" />
+          <ScalarProperty Name="AppEntityID" ColumnName="AppEntityID" />
+          <ScalarProperty Name="WebLinkID" ColumnName="WebLinkID" />
+          <ScalarProperty Name="AppFeatureID" ColumnName="AppFeatureID" />
+          <ScalarProperty Name="AllowFeatureFlag" ColumnName="AllowFeatureFlag" />
+          <ScalarProperty Name="UnlockQ" ColumnName="UnlockQ" />
+          <ScalarProperty Name="UnlockAttempt" ColumnName="UnlockAttempt" />
+          <ScalarProperty Name="UnlockedBy" ColumnName="UnlockedBy" />
+          <ScalarProperty Name="UnlockedDate" ColumnName="UnlockedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeatureCategoties">
+      <EntityTypeMapping TypeName="SAPDACTIVITYModel.FeatureCategoty">
+        <MappingFragment StoreEntitySet="SIA_AppFeatureCategoty">
+          <ScalarProperty Name="AppFeatureCategoryID" ColumnName="AppFeatureCategoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebCategories">
+      <EntityTypeMapping TypeName="SAPDACTIVITYModel.WebCategories">
+        <MappingFragment StoreEntitySet="SIA_WebCategories">
+          <ScalarProperty Name="WebCategoriesID" ColumnName="WebCategoriesID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebLinks">
+      <EntityTypeMapping TypeName="SAPDACTIVITYModel.WebLinks">
+        <MappingFragment StoreEntitySet="SIA_WebLinks">
+          <ScalarProperty Name="WebLinkID" ColumnName="WebLinkID" />
+          <ScalarProperty Name="WebCategoryID" ColumnName="WebCategoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="WebLink" ColumnName="WebLink" />
+          <ScalarProperty Name="VisibleFlag" ColumnName="VisibleFlag" />
+          <ScalarProperty Name="NeedAuthorizationFlag" ColumnName="NeedAuthorizationFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="SAPDACTIVITYModel.UserRole">
+        <MappingFragment StoreEntitySet="SIA_WebRole">
+          <ScalarProperty Name="WebRoleID" ColumnName="WebRoleID" />
+          <ScalarProperty Name="WebRole" ColumnName="WebRole" />
+          <ScalarProperty Name="WebRoleCode" ColumnName="WebRoleCode" />
+          <ScalarProperty Name="VisibleFlag" ColumnName="VisibleFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebSiteUsers">
+      <EntityTypeMapping TypeName="SAPDACTIVITYModel.WebSiteUser">
+        <MappingFragment StoreEntitySet="SIA_WebSiteUser">
+          <ScalarProperty Name="WebSiteUserID" ColumnName="WebSiteUserID" />
+          <ScalarProperty Name="WebLinkID" ColumnName="WebLinkID" />
+          <ScalarProperty Name="AppEntityID" ColumnName="AppEntityID" />
+          <ScalarProperty Name="WebSiteRoleID" ColumnName="WebSiteRoleID" />
+          <ScalarProperty Name="EnteredByID" ColumnName="EnteredByID" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="GateStatus" ColumnName="GateStatus" />
+          <ScalarProperty Name="GateQuestion" ColumnName="GateQuestion" />
+          <ScalarProperty Name="GateAttemptDate" ColumnName="GateAttemptDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="SAPDACTIVITYModel.User">
+        <MappingFragment StoreEntitySet="User_User">
+          <ScalarProperty Name="AppEntityID" ColumnName="AppEntityID" />
+          <ScalarProperty Name="PIN" ColumnName="PIN" />
+          <ScalarProperty Name="SAP" ColumnName="SAP" />
+          <ScalarProperty Name="CADID" ColumnName="CADID" />
+          <ScalarProperty Name="Badge" ColumnName="Badge" />
+          <ScalarProperty Name="JobTitleID" ColumnName="JobTitleID" />
+          <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="RDID" ColumnName="RDID" />
+          <ScalarProperty Name="ClassificationID" ColumnName="ClassificationID" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="WorkStatusID" ColumnName="WorkStatusID" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Ethnicty" ColumnName="Ethnicty" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="WorksheetVisibleFlag" ColumnName="WorksheetVisibleFlag" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

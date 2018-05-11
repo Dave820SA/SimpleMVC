@@ -1,0 +1,71 @@
+﻿@model UserBusinessLayer.WebSiteUser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>WebSiteUser</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SIA_WebLinks.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SIA_WebLinks.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.User_User.PIN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User_User.PIN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SIA_WebRole.WebRole)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SIA_WebRole.WebRole)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EnteredByID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EnteredByID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ModifiedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModifiedDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GateStatus)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GateStatus)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GateQuestion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GateQuestion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GateAttemptDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GateAttemptDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.WebSiteUserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

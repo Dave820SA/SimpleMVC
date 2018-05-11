@@ -1,0 +1,75 @@
+﻿@model IEnumerable<UserBusinessLayer.FeatureAccess>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User.PIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WebLinkID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SIA_AppFeature.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AllowFeatureFlag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnlockQ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnlockAttempt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnlockedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnlockedDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.PIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WebLinkID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SIA_AppFeature.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AllowFeatureFlag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnlockQ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnlockAttempt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnlockedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnlockedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AppFeatureAccessID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AppFeatureAccessID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AppFeatureAccessID })
+        </td>
+    </tr>
+}
+
+</table>

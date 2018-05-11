@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AwardActivityModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AwardActivityModelStoreContainer">
+    <EntitySet Name="tblHelpText" EntityType="AwardActivityModel.Store.tblHelpText" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tblHelpText">
+    <Key>
+      <PropertyRef Name="HelpTextKey" />
+    </Key>
+    <Property Name="HelpTextKey" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="HelpText" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+</Schema>
