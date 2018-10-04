@@ -1,49 +1,47 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
-    <h2>
-        @ViewBag.HelpText
-    </h2>
 
-   <table>
-        <tr>
-            <td>First Name</td>
-            <td><input id="firstName" type="text" /></td>
-            <td><div id="firstNameHelpDiv"></div></td>
-        </tr>
-        <tr>
-            <td>Last Name</td>
-            <td><input id="lastName" type="text" /></td>
-            <td><div id="lastNameHelpDiv"></div></td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><input id="email" type="text" /></td>
-            <td><div id="emailHelpDiv"></div></td>
-        </tr>
-        <tr>
-            <td>Income</td>
-            <td><input id="income" type="text" /></td>
-            <td><div id="incomeHelpDiv"></div></td>
-        </tr>
-    </table>
+<h2>Index</h2>
 
-@section scripts
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="progress" id="prg">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+
+                    </div>
+                </div>
+                <div id="result"></div>
+                <input type="button" class="btn btn-primary" value="GetStatus" id="docstatus" />
+            </div>
+        </div> 
+   </div>
+
+   @section scripts
 {
     <script type="text/javascript">
 
-        $(document).ready(function () {
-            var textBoxes = $('input[type="text"]');
-            textBoxes.focus(function () {
-                var helpDiv = $(this).attr('id') + 'HelpDiv';
-                $('#' + helpDiv).load('Help.html #' + helpDiv);
-            });
+        $(function () {
+            $("#docstatus").click(function () {
 
-            textBoxes.blur(function () {
-                var helpDiv = $(this).attr('id') + 'HelpDiv';
-                $('#' + helpDiv).html('');
+                $("#result").empty();
+                $("#prg .progress-bar").css("width", "50%").addClass("progress-bar-striped active").html("50%");
+                $.ajax({
+                    url: "/Home/ExampleDemo",
+                    data: {},
+                    success: function (data) {
+                        $("#prg .progress-bar").css({ "width": "100%" }).removeClass("active").html("100%");
+                        $("#result").html(data);
+                    }, error: function () {
+                        alert("error");
+                    }
+                });
+
             });
         });
+
     </script>
 
 

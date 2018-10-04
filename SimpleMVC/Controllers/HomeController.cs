@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using SimpleMVC.Models;
 using System.Web.Script.Serialization;
+using System.Threading;
 
 namespace SimpleMVC.Controllers
 {
@@ -14,11 +15,21 @@ namespace SimpleMVC.Controllers
         {
             //string helpTextKey = Request["HelpTextKey"];
             
-            ViewBag.HelpText = GetHelpTextByKey("email");
+            //ViewBag.HelpText = GetHelpTextByKey("email");
             return View();
+
+            //Thread.Sleep(5000);
+            //string status = "Task Completed Successfully";
+            //return Json(status, JsonRequestBehavior.AllowGet);
         }
 
-        
+        public ActionResult ExampleDemo()
+        {
+            Thread.Sleep(1000);
+            string status = "Task Completed Successfully";
+            return Json(status, JsonRequestBehavior.AllowGet);
+        }
+
         private string GetHelpTextByKey (string key)
         {
 
