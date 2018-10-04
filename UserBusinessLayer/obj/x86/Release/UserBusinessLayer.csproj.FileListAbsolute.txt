@@ -4,3 +4,8 @@ C:\Users\dd94223\Documents\SimpleMVC\UserBusinessLayer\bin\Release\UserBusinessL
 C:\Users\dd94223\Documents\SimpleMVC\UserBusinessLayer\obj\x86\Release\UserBusinessLayer.dll
 C:\Users\dd94223\Documents\SimpleMVC\UserBusinessLayer\obj\x86\Release\UserBusinessLayer.pdb
 C:\Users\dd94223\Documents\SimpleMVC\UserBusinessLayer\obj\x86\Release\UserBusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\dd94223\Documents\GitHub\SimpleMVC\UserBusinessLayer\bin\Release\UserBusinessLayer.dll.config
+C:\Users\dd94223\Documents\GitHub\SimpleMVC\UserBusinessLayer\bin\Release\UserBusinessLayer.dll
+C:\Users\dd94223\Documents\GitHub\SimpleMVC\UserBusinessLayer\bin\Release\UserBusinessLayer.pdb
+C:\Users\dd94223\Documents\GitHub\SimpleMVC\UserBusinessLayer\obj\x86\Release\UserBusinessLayer.dll
+C:\Users\dd94223\Documents\GitHub\SimpleMVC\UserBusinessLayer\obj\x86\Release\UserBusinessLayer.pdb
