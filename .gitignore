@@ -253,3 +253,5 @@ paket-files/
 *.suo
 SimpleMVC.suo
 *.suo
+*.suo
+*.cache
